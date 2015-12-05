@@ -90,7 +90,7 @@ public class FullscreenActivity extends AppCompatActivity implements GestureDete
         });
 
 
-        browser.loadUrl("http://test.alrehablife.com/");
+        browser.loadUrl("http://android.alrehablife.com/");
 
 
     }
@@ -148,10 +148,10 @@ public class FullscreenActivity extends AppCompatActivity implements GestureDete
             this.activity = activity;
             this.urlCache = new UrlCache(activity);
 
-            this.urlCache.register("http://test.alrehablife.com/", "index.html",
+            this.urlCache.register("http://android.alrehablife.com/", "index.html",
                     "text/html", "UTF-8", 5 * UrlCache.ONE_MINUTE);
 
-            this.urlCache.register("http://test.alrehablife.com/aboutus.html", "aboutus.html",
+            this.urlCache.register("http://android.alrehablife.com/aboutus.html", "aboutus.html",
                     "text/html", "UTF-8", 5 * UrlCache.ONE_MINUTE);
         }
 
@@ -170,8 +170,8 @@ public class FullscreenActivity extends AppCompatActivity implements GestureDete
         public void onPageFinished(WebView view, String url) {
             super.onPageFinished(view, url);
 
-            if("http://test.alrehablife.com/".equals(url)){
-                this.urlCache.load("http://test.alrehablife.com/");
+            if("http://android.alrehablife.com/".equals(url)){
+                this.urlCache.load("http://android.alrehablife.com/");
             }
             else
             {
